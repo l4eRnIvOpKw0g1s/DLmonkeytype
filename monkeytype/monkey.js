@@ -1,7 +1,7 @@
 var wordlibrary;
 fetch('monkeytype/1-1000.txt')
     .then(response => response.text())
-    .then(data => wordlibrary = data.split('\n'));
+    .then(data => wordlibrary = String(data.split('\n')));
 
 console.log(typeof wordlibrary);
 console.log(wordlibrary.slice(0, 50));
