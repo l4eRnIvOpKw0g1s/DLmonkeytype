@@ -1,8 +1,8 @@
 var words
 fetch('monkeytype/1-1000.txt')
     .then(response => response.text())
-    .then(data => words = string(data));
-    
+    .then(data => words = String(data));
+
 console.log(typeof words);
 let wordlibrary = words.split(" ");
 console.log(wordlibrary.slice(0, 50));
