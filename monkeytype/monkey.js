@@ -4,6 +4,7 @@ fetch('monkeytype/1-1000.txt')
     .then(data => words = String(data));
 
 console.log(typeof words);
+console.log(words);
 let wordlibrary = words.split(" ");
 console.log(wordlibrary.slice(0, 50));
 document.getElementById("words").innerHTML = wordlibrary;
