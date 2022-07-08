@@ -1,3 +1,50 @@
+:root {
+    --black: #323437;
+    --gray: #646669;
+    --yellow: #EEC012;
+    --white: #C4C3B9;
+}
 body {
-    background-color: lightgray;
+    background-color: var(--black);
+    font-family: "Roboto Mono"; 
+}
+.borders {
+    padding: 50px 100px;
+}
+.title {
+    position: relative;
+    font-size: 12px;
+}
+.icon {
+    position: absolute;
+    top: 0.9em;
+    width: 3.2em;
+    fill: var(--yellow);
+}
+#monkeysee {
+    position: absolute;
+    left: 5em;
+    color: var(--gray);
+    font-size: 0.8em;
+    margin: 0px;
+}
+#monkeytype {
+    position: absolute;
+    font-size: 2.8em;
+    top: -0.08em;
+    left: 1.4em;
+    color: var(--white);
+    margin: 0px;
+}
+
+#textbox {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#textbox > p {
+    color: var(--white);
+    font-size: 1.5em
 }
