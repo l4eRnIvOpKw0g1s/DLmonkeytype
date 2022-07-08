@@ -23,6 +23,10 @@ function logKey(e) {
         log.textContent += `${e.key}`;
         console.log(e.key);
     } else {
+        if (e.key === "Tab") {
+            fetchLibrary();
+            log.textContent = ""
+        }
         if (e.key === "Backspace" || e.key === "Delete") {
             log.textContent = log.textContent.slice(0, -1);
         }
