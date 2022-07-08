@@ -13,3 +13,11 @@ async function fetchLibrary() {
     document.getElementById("words").innerHTML = typelist.join(" ");
 }
 fetchLibrary();
+
+const log = document.getElementById('log');
+
+document.addEventListener('keypress', logKey);
+
+function logKey(e) {
+  log.textContent += `${e.key}`;
+}
