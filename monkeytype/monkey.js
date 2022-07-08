@@ -23,14 +23,14 @@ function logKey(e) {
         log.textContent += `${e.key}`;
         console.log(e.key);
     } else {
-        if (e.key === "Tab") {
+        if (e.key === "Enter") {
             fetchLibrary();
             log.textContent = ""
         }
         if (e.key === "Backspace" || e.key === "Delete") {
             log.textContent = log.textContent.slice(0, -1);
         }
-        if (log.textContent.slice(-1) != " " && (e.key == " " || e.key == "Enter")) {
+        if (log.textContent.slice(-1) != " " && (e.key == " ")) {
             console.log("hello");
             log.textContent += " "; 
     }
