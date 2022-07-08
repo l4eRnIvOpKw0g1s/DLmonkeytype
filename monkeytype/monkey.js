@@ -16,8 +16,19 @@ fetchLibrary();
 
 const log = document.getElementById('log');
 
-document.addEventListener('keypress', logKey);
+document.addEventListener('keydown', logKey);
 
 function logKey(e) {
-  log.textContent += `${e.key}`;
+    if (e.key.length === 1) {
+        log.textContent += `${e.key}`;
+        console.log(e.key);
+    } else {
+        if (e.key === "Backspace" || e.key === "Delete") {
+            log.textContent = log.textContent.slice(0, -1);
+        }
+        if (log.textContent.slice(-1) != " " && (e.key == " " || e.key == "Enter")) {
+            console.log("hello");
+            log.textContent += " "; 
+    }
+    }
 }
