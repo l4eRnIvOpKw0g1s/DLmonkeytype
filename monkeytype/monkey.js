@@ -19,9 +19,9 @@ const log = document.getElementById('log');
 document.addEventListener('keydown', logKey);
 
 function logKey(e) {
-    if (e.key.length === 1) {
+    console.log(e.key)
+    if (e.key.length === 1 && e.key != " ") {
         log.textContent += `${e.key}`;
-        console.log(e.key);
     } else {
         if (e.key === "Enter") {
             fetchLibrary();
@@ -31,8 +31,7 @@ function logKey(e) {
             log.textContent = log.textContent.slice(0, -1);
         }
         if (log.textContent.slice(-1) != " " && (e.key == " ")) {
-            console.log("hello");
             log.textContent += " "; 
-    }
+        }
     }
 }
