@@ -3,16 +3,30 @@
     --gray: #646669;
     --yellow: #EEC012;
     --white: #C4C3B9;
+    --red: #D04855;
+    --darkRed: #812A33;
 }
 body {
+    margin: 0px;
+    padding: 0px;
     background-color: var(--black);
     font-family: "Roboto Mono"; 
 }
-.borders {
-    padding: 50px 200px;
+#border {
+    margin: 0px;
+    padding: 5vh 10vw;
+    width: 80vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
 }
 .title {
-    position: relative;
+    position: absolute;
+    top: 5vh;
+    left: 10vw;
     font-size: 12px;
 }
 .icon {
@@ -27,6 +41,7 @@ body {
     color: var(--gray);
     font-size: 0.8em;
     margin: 0px;
+    width: 10vw
 }
 #monkeytype {
     position: absolute;
@@ -36,16 +51,59 @@ body {
     color: var(--white);
     margin: 0px;
 }
-
+#count {
+    color: var(--yellow);
+    font-size: 1.5em;
+}
 #textbox {
     display: flex;
-    flex-direction: column;
-    height: 80vh;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+    position: relative;
 }
 
-#textbox > p {
+letter {
+    color: var(--gray);
+    font-size: 1.5em;
+}
+#textbox > div {
+    display: inline;
+    margin: 0px 5px;
+}
+
+.correct {
     color: var(--white);
-    font-size: 1.5em
+}
+.incorrect {
+    color: var(--red);
+}
+.extra {
+    color: var(--darkRed);
+}
+
+#timer {
+    color: var(--white);
+    font-size: 4em;
+}
+
+.wpm {
+    color: var(--yellow);
+    font-size: 3em;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+#caret {
+    position: absolute;
+    top: 3px;
+    background-color: var(--yellow);
+    width: 2px;
+    height: 1.65em;
+    transition: transform 0.2s;
 }
