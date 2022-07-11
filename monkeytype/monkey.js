@@ -1,4 +1,4 @@
-
+//why dont you update
 const textbox = document.getElementById('textbox');
 const count = document.getElementById('count');
 const timerDisplay = document.getElementById('timer');
